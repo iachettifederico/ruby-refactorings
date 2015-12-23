@@ -1,0 +1,57 @@
+* For myself
+- Install ecukes
+- Create que project properly
+- Have fun
+
+* Disclaimer
+This library is (at this time) experimental and in developement.
+
+
+* Keybingings.  
+
+This library ships without any keybindings configured to allow you to pick and choose what commands are important to you and which keybindigs you want to use.
+
+I use it with =M-r= as the prefix and then a mnemnoc key such as =M-r l= for Extract Let.
+
+* Refactorings for Ruby
+
+** TODO Extract Method
+** TODO Extract variable
+** TODO Inline variable
+** TODO Extract let
+** TODO Memoized method calculation
+memoize the result of a method by changing
+#+BEGIN_SRC ruby
+def method_name
+  # line 1
+  # line 2
+  # line 3
+end
+#+END_SRC
+
+to
+
+#+BEGIN_SRC ruby
+def method_name(arg1, arg2: :value)
+  @_method_name ||= _method_name(arg1, arg2: :value)
+end
+
+def _method_name(arg1, arg2: :value)
+  # line 1
+  # line 2
+  # line 3
+end
+#+END_SRC
+
+** TODO Extract Class/Module
+** TODO Extract Class/Module to new file
+** TODO Rename local variable
+** TODO Extract instance variable ass attribute reader/writer/accessor
+
+* Refactorings for Rails
+** Controller
+*** TODO Convert to helper method
+** View
+*** TODO Extract partial
+*** TODO Erb to Haml
+*** TODO Erb to Slim
